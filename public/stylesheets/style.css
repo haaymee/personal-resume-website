@@ -7,7 +7,7 @@
 
 html {
     scroll-behavior: smooth;
-    overflow: hidden;
+    /* scroll-snap-type: y proximity; */
 
     font-family: "Noto Sans JP", sans-serif;
 
@@ -19,13 +19,13 @@ html {
     display: flex;
     gap: 1rem;
     list-style: none;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .header > ul {
     display: flex;
     list-style: none;
-    gap: 2em;
+    gap: 5em;
 
     align-items: center;
 }
@@ -34,7 +34,7 @@ html {
     text-decoration: none;
     color: inherit;
 
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 .header img {
@@ -46,13 +46,7 @@ html {
     height: 50rem;
 }
 
-.introduction {
-    height: 75vh;
-    margin-left: 10rem;
-    margin-top: 10rem;
-}
-
-.introduction > h1 {
+.title-box > .title-font {
 
     margin-top: 0em;
     margin-bottom: 0.5em;
@@ -71,4 +65,52 @@ html {
 
     font-size: 1.15em;
     font-weight: 500;
+}
+
+.scroll-section {
+    /* scroll-snap-align: center;
+    scroll-snap-stop: always; */
+
+    
+    height: 50vh;
+    margin: 10em 10em 10em 10em;
+}
+
+.scroll-section.header {
+    height: 1rem;
+    margin: 3em 0 0 80em;
+}
+
+.scroll-section.right-align > h1{
+    text-align: right;
+}
+
+.title-box .pic-right-caption {
+    display: flex;
+    align-items: center;
+
+    margin: 5em 0em 5em 0em
+}
+
+.title-box > .pic-right-caption > img {
+    height: 450px;
+    width: 450px;
+
+    filter: brightness(0.9);
+    box-shadow: -5px 5px 15px 5px rgb(27, 27, 27);
+
+    border-radius: 8px; /* for rounded corners */
+}
+
+.title-box > .pic-right-caption > p {
+    padding: 0em 10em 0em 0em;
+
+    text-align: justify;
+
+    line-height: 2;
+    font-weight: 400;
+}
+
+.right-align {
+    text-align: right;
 }
